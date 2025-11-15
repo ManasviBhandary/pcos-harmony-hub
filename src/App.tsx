@@ -10,6 +10,9 @@ import Auth from "./pages/Auth";
 import Knowledge from "./pages/Knowledge";
 import Tracker from "./pages/Tracker";
 import Wellness from "./pages/Wellness";
+import Reports from "./pages/Reports";
+import Contact from "./pages/Contact";
+import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +31,9 @@ const App = () => (
             <Route path="/knowledge" element={<Knowledge />} />
             <Route path="/tracker" element={<Tracker />} />
             <Route path="/wellness" element={<Wellness />} />
+            <Route path="/reports" element={<Reports />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
