@@ -80,7 +80,13 @@ export default function Wellness() {
       weight: profile.weight,
     });
 
-    const { error } = await supabase.from("exercise_plans").insert([{ user_id: user.id, ...plan }]);
+    const { error } = await supabase.from("exercise_plans").insert([{ 
+      user_id: user.id, 
+      daily_plan: plan.dailyPlan,
+      weekly_plan: plan.weeklyPlan,
+      routines: plan.routines,
+      step_count_recommendation: plan.stepCount
+    }]);
     
     if (!error) {
       toast({ title: "Exercise plan generated!" });
